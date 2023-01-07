@@ -8,6 +8,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: #333;
+  margin: 5px;
 }
 
 header,
@@ -36,6 +37,15 @@ h2,
 nav,
 .post-date {
   font-family: lora;
+}
+
+h1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  padding-top: 40px;
 }
 
 nav {
@@ -80,6 +90,12 @@ a:active {
   margin-top: 2rem;
   padding-bottom: 1rem;
   text-transform: uppercase;
+  font-weight: bold;
+}
+
+figure {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 img {
@@ -87,7 +103,21 @@ img {
   margin: 0 auto;
 }
 
+p {
+  font-weight: bold;
+}
+
+/*******************************************
+ *
+ * Medium
+ *
+ ******************************************/
+
 @media only screen and (min-width: 32.5em) {
+  h1 {
+    font-size: 5rem;
+  }
+
   article {
     display: flex;
   }
@@ -102,11 +132,24 @@ img {
   }
 
   section {
-    border-left:1px solid #333;
+    border-left: 1px solid #333;
+  }
+
+  h2 {
+    padding-left: 15px;
   }
 
   .post-date {
     min-width: 25%;
-  border-bottom: none;
+    padding-right: 15px;
+    border-bottom: none;
+  }
+
+  p {
+    padding-left: 15px;
+    padding-bottom: 15px;
+  }
+  article:nth-child(1) {
+    border-bottom: 0.5px solid #d0d0d0;
   }
 }
