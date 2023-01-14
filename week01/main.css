@@ -134,8 +134,8 @@ p {
   }
 
   section {
-    border-left: 1px solid #333;
-    /* width: 750px; */
+    border-left: 0.5px solid #d0d0d0;
+    width: 800px;
   }
 
   h2 {
