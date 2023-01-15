@@ -32,6 +32,10 @@
   background-color: blue;
 } */
 
-label ~ input {
+/* label ~ input {
   background-color: red;
+} */
+
+input:required:invalid {
+  background-color: blue;
 }
