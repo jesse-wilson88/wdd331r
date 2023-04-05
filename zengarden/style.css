@@ -548,7 +548,8 @@ header h2 abbr {
   .requirements {
     grid-column: 2/span 1;
     padding: 49px 27.7734% 0 28px;
-    column-count: 3;
+    -moz-column-count: 3;
+         column-count: 3;
   }
 }
 .requirements * {
@@ -569,7 +570,8 @@ header h2 abbr {
 @media (min-width: 1215px) {
   .requirements h3 {
     width: 100%;
-    column-span: all;
+    -moz-column-span: all;
+         column-span: all;
   }
 }
 .requirements p {
@@ -669,6 +671,4 @@ footer a {
 }
 .sidebar ul {
   margin-top: 12px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
