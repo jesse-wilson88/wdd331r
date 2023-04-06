@@ -9,32 +9,31 @@
 body * {
   margin: 10px;
 }
+
 /*----------- HEADER --------------*/
-
 /*----------- NAVIGATION --------------*/
-
 /*----------- MAIN --------------*/
 ul {
   line-height: 10px;
 }
 
-a, b {
+a,
+b {
   margin: 0;
 }
 
 a:visited {
   color: darkgreen;
 }
-
 a:hover {
   font-weight: bold;
   color: darkmagenta;
 }
-/*----------- FOOTER --------------*/
 
+/*----------- FOOTER --------------*/
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
-}
+}/*# sourceMappingURL=small.css.map */
