@@ -1,0 +1,1 @@
+I deleted the node_modules folder to save some space because he size is large. To get the folder back, just type "npm install" and everything will be brought back.

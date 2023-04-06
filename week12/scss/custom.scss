@@ -1,0 +1,46 @@
+$body-bg: rgb(27, 27, 27);
+$body-color: white;
+$primary: rgb(0, 119, 255);
+
+$font-family-sans-serif: "Poppins", sans-serif;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.custombg {
+  // If you have a color, as we have black, and the image cannot be found, the background will be black.
+  background: black url("../assets/abstract.jpg");
+  background-size: cover;
+}
+
+.card {
+  border: none;
+
+  &-body {
+    background: #2e2e2e;
+
+    & p {
+      color: #c2c2c2;
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+}
+
+.card-img,
+.card-img-top {
+  object-fit: cover;
+  aspect-ratio: 1 / 0.7;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}

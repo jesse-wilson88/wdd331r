@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLE SHEETS -->
+    <link href="normalize.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Debugging and Optimization</title>
+  </head>
+  <body>
+    <h1>Site: <a target="_blank" href="https://costco.ca/">https://costco.ca/</a></h1>
+    <p>Testing tool: Google Lighthouse (via Inspect)</p>
+    <p>
+      One of the problems I had was trying to use the tool that was not viewed
+      from within the inspect window of chrome. I tried to use web.dev but it
+      seems they have removed it from their page and are recommending people go
+      to <a href="https://pagespeed.web.dev">https://pagespeed.web.dev</a>. Took me a little bit to find that in the
+      original site. I am not sure how you wanted this presented but I thought
+      this would work well.
+    </p>
+    <p>
+      I am not a seasoned programmer for websites at this time, so I can only
+      search for things that make sense to me at this time and do my best to
+      interpret what I am reading.
+    </p>
+    <h1>Performance:</h1>
+    <p>
+      <b>Reduce unused JavaScript –</b> They could use Code splitting with React.lazy
+      and suspense. When I read about this, the first thing that came to mind
+      was lazy loading which allowed us to look at a page and not load all
+      images until it was close to be viewed scrolled or navigated to. This
+      prevented all images from being loaded all at once. This seems to do the
+      same thing in some ways. It is used to load different parts of the
+      application only when it is needed. Looking at some of the unused function
+      in JS, I can see why it would not be used at the time. It is because when
+      you have sections with IF statements and it does not meet those
+      requirements, they will never be used or at least at times. I also noticed
+      that if you run lighthouse again, the results could be a little different.
+    </p>
+    <p>
+      <b>Defer offscreen images –</b> I rewrote the one above to hopefully make it
+      sound better. It was not till I got to this part that I remember what it
+      was called. Lazy loading allows images to be downloaded (be viewed by the
+      user) when they scroll or navigate through the website. In lighthouse
+      report, it mentioned using lazy-loader for off screen and hidden images
+      after all the critical resources were finished loading.
+    </p>
+    <p>
+      <b>Reduce unused CSS –</b> I have never maintained a large website before. So
+      what I am about to say could be wrong but my first thought would be to
+      remove all unused CSS code. Why not? If it is not being used, then don’t
+      have it in the code. Now maybe a good thing would be to have a file with
+      unused code so if you find that you really needed it, you do not have to
+      recreate it, but could take it out of the unused file and put it back with
+      the used code. But comment well on the unused file so you know where it
+      was located and anything else one would want to add to it. Now looking at
+      other resources, they say the unused CSS should be removed. One can view
+      the unused CSS from inspecting the page and looking at the Coverage tab.
+      There are some sites one could use to do this. I tried PurifyCSS but it
+      had issues when I tried it. As I am writing this I found this site and
+      trying UnusedCSS. The following site has a few more one could use.
+      UnusedCSS failed for some reason. Maybe there is too much to load and be
+      tested…lol
+    </p>
+    <p>
+      <b>Preload Largest Contentful Paint image –</b> This seems weird. The defer
+      offscreen images, if I am correct, is to load last and even until a user
+      scrolls or navigates to that portion of the site. But LCP is for loading
+      first hence the word preload. If seems to mean preloading the image before
+      the user even requests it. I guess this can be done by using the “preload”
+      attribute, using JavaScript to dynamically load the image or by using a
+      web performance optimization tool or framework to automatically preload
+      important page assets.
+    </p>
+    <p>
+      I have worked in a lot of network closets working in the military and even
+      in my current job as a Computer Technician. One of my biggest things about
+      doing the cabling in a network closet is, if you do it right the first
+      time, you should never have to touch it again. I had that same thought
+      going over this week’s content. But shortly after, that thought went
+      away…lol The main reason is because the thought came into my mind that
+      programming changes so fast and often, that there is no way you could make
+      the perfect website and not have to update content in it to keep it
+      running. 😊
+    </p>
+  </body>
+</html>
