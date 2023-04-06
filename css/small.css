@@ -18,6 +18,10 @@ ul {
   line-height: 10px;
 }
 
+a, b {
+  margin: 0;
+}
+
 a:visited {
   color: darkgreen;
 }
